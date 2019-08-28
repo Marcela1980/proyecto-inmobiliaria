@@ -1,3 +1,6 @@
+html {
+    font-size: 62.5%; /** Reset para REMS, donde 62.5% = 10px de 16px **/
+}
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -5,7 +8,7 @@ body {
 
 /** Globales **/
 .contenedor{
-    max-width: 1200px;
+    max-width: 120rem; /** = 1200px **/
     margin:0 auto 0 auto; /* margen top derecha abajo izquierda */
 }
 
@@ -15,21 +18,21 @@ background-image: url(../img/header.jpg);
 background-position: center center;
 background-size: cover;
 height: 100vh; /* vh detecta la altura de la pantalla */
-min-height: 600px;
+min-height: 60rem;
 }
 .barra{
     display: flex;
     justify-content: space-between; /* separa la imagen del texto del menu */
     align-items: center; /* alinea la imagen y el texto del menu */
-    padding-top: 30px;
+    padding-top: 3rem;
 }
 
 /** Navegacion **/
 .navegacion a{
     color: white;
     text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px; /* les da un marge o espacio a la derecha, para separar los nombres del menu*/
+    font-size: 1.8rem; /** = 18px **/
+    margin-right: 2rem; /* les da un marge o espacio a la derecha, para separar los nombres del menu*/
 }
 .navegacion a:hover{
     color: #71b100;
