@@ -1,0 +1,9 @@
+/* HEADER */
+.site-header.inicio{
+background-image: url(../img/header.jpg);
+background-position: center center;
+background-size: cover;
+height: 100vh; /* vh detecta la altura de la pantalla */
+min-height: 600px;
+
+}
