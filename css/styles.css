@@ -3,40 +3,160 @@ html {
 }
 body {
     font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
 }
 
 
-/** Globales **/
+
+/*=============================================
+=            GLOBALES            =
+=============================================*/
+img {
+max-width: 100%; /** hace que todas las imagenes sean responsivas y se ajusten a su contenedor **/
+}
 .contenedor{
     max-width: 120rem; /** = 1200px **/
-    margin:0 auto 0 auto; /* margen top derecha abajo izquierda */
+    margin: 0 auto 0 auto; /* margen top derecha abajo izquierda */
+    line-height: 2;
+}
+h1 {
+font-size: 3.8rem;
+}
+h2 {
+font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
 }
 
-/* HEADER */
+/*=====  End of GLOBALES  ======*/
+
+/*=============================================
+=            UTILIDADES            =
+=============================================*/
+.seccion { /** da un margen arriba y abajo del contenedor **/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.fw_300 { /** esta clase le dara un height a los fonts **/
+    font-weight: 300;
+
+}
+.centrar_texto {
+    text-align: center;
+}
+
+/*=====  End of UTILIDADES  ======*/
+
+
+/*=============================================
+=            BOTONES            =
+=============================================*/
+.boton {
+
+}
+.boton_amarillo{
+
+}
+.boton_verde{
+    
+}
+
+/*=====  End of BOTONES  ======*/
+
+
+
+
+/*=============================================
+            =       HEADER          =
+=============================================*/
 .site-header.inicio{
-background-image: url(../img/header.jpg);
-background-position: center center;
-background-size: cover;
-height: 100vh; /* vh detecta la altura de la pantalla */
-min-height: 60rem;
-}
-.barra{
-    display: flex;
-    justify-content: space-between; /* separa la imagen del texto del menu */
-    align-items: center; /* alinea la imagen y el texto del menu */
-    padding-top: 3rem;
-}
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; /* vh detecta la altura de la pantalla */
+    min-height: 60rem;
+    }
+    .contenido_header{ /* flexbox solo afecta a los hijos en este caso a barra y al h1 */
+        height: 100%; /* este height hace q el hijo ocupe todo el espacio del padre */
+        display: flex; /* usamos  flexbox para poder mover los elementos */
+        flex-direction: column; 
+        justify-content: space-between; 
+    }
+    .contenido_header h1{
+        color: white;
+        padding-bottom: 2rem;
+        max-width: 60rem; /* limita el espacio del texto y eso genera que parte del texto se vaya hacia abajo en otra linea, en vez de poner un salto en el html */
+        line-height: 2; /* este es el interlineado */
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between; /* separa la imagen del texto del menu */
+        align-items: center; /* alinea la imagen y el texto del menu */
+        padding-top: 3rem;
+    }
+    
+    
+    /*----------  NAVEGACION  ----------*/
+    
+    .navegacion a{
+        color: white;
+        text-decoration: none;
+        font-size: 1.8rem; /** = 18px **/
+        margin-right: 2rem; /* les da un marge o espacio a la derecha, para separar los nombres del menu*/
+    }
+    .navegacion a:hover{
+        color: #71b100;
+    }
+    .navegacion a:last-of-type{
+        margin: 0; /* al ultimo elemento del menu Contacto le saca el margen anterior y le da margen 0 */
+    }
 
-/** Navegacion **/
-.navegacion a{
-    color: white;
-    text-decoration: none;
-    font-size: 1.8rem; /** = 18px **/
-    margin-right: 2rem; /* les da un marge o espacio a la derecha, para separar los nombres del menu*/
+    
+    /*----------  ICONOS NOSOTROS  ----------*/
+    
+    .icono_nosotros { /** iconos nosotros es el padre y el flexbox afecta a sus hijos osea la clase iconos **/
+        display: flex;
+        justify-content: space-between;
+    }
+    .icono { /** hijos ya son flex por eso hay q usar flex-basis en vez de width para determinar el ancho de contenido iconos **/
+        flex-basis: calc(33.3% - 1.6rem);
+        text-align: center;
+    }
+    .icono h3 {
+        text-transform: uppercase;
+    }
+    
+/*=====  End of Section HEADER  ======*/
+
+
+/*=============================================
+=            MAIN            =
+=============================================*/
+/** ANUNCIOS **/
+.contenedor_anuncios{
+display: flex;
+justify-content: space-between;
 }
-.navegacion a:hover{
+.anuncio{
+flex-basis: calc(33.3% - 1.6rem);
+border: 1px solid #b5b5b5;
+background-color: #f5f5f5;
+}
+.contenido_anuncio{
+padding: 2rem;
+}
+.contenido_anuncio h3, 
+.contenido_anuncio p { 
+margin: 0;  /** para sacar el margen a h3 y p solo del contenedor anuncio, de esta manera no afecta al padding que puse arriba **/
+}
+.precio {
     color: #71b100;
+    font-weight: 700;
 }
-.navegacion a:last-of-type{
-    margin: 0; /* al ultimo elemento del menu Contacto le saca el margen anterior y le da margen 0 */
-}
+/*=====  End of MAIN  ======*/
+
+
