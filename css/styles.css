@@ -1,5 +1,9 @@
 html {
+    box-sizing: border-box; /**sirve para que si ponemos un width no se sume al padding **/
     font-size: 62.5%; /** Reset para REMS, donde 62.5% = 10px de 16px **/
+}
+*, *:before, *:after{
+box-sizing: inherit;
 }
 body {
     font-family: 'Lato', sans-serif;
@@ -48,6 +52,9 @@ h4 {
 .centrar_texto {
     text-align: center;
 }
+.d_block{
+    display: block!important; /** esto hace que aunque haya un display despues de este, el sistema toma este como primero e importante **/
+}
 
 /*=====  End of UTILIDADES  ======*/
 
@@ -56,13 +63,21 @@ h4 {
 =            BOTONES            =
 =============================================*/
 .boton {
-
+color: #ffffff;
+font-weight: 700;
+text-decoration: none;
+font-size: 1.8rem;
+padding: 1rem 3rem;
+margin-top: 3rem;
+/** los enlaces y las imagenes son display inline no permiten se poner width ni margen ni padding, pero si le decimos que se vuelva inline-block me aplica sin ocupar todo el ancho**/
+display: inline-block;
+text-align: center;
 }
 .boton_amarillo{
-
+background-color: #e08709;
 }
 .boton_verde{
-    
+background-color: #71b100;
 }
 
 /*=====  End of BOTONES  ======*/
@@ -157,6 +172,94 @@ margin: 0;  /** para sacar el margen a h3 y p solo del contenedor anuncio, de es
     color: #71b100;
     font-weight: 700;
 }
+.iconos_caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.iconos_caracteristicas li{
+   /* flex: 1;*/
+    display: flex;
+}
+.iconos_caracteristicas li img{
+    margin-right: 2rem;
+}
+.ver_todas{
+    display: flex;
+    justify-content: flex-end;
+}
+
 /*=====  End of MAIN  ======*/
+
+
+/*=============================================
+=            CONTACTANOS            =
+=============================================*/
+.imagen_contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height:40rem;
+    display: flex;
+    align-items: center;
+}
+.contenedor_contacto{
+    flex: 1; /** detecta cuanto tamaño tiene el contenedor y lo divide por 1 y el resultado se lo asigna a ese elemento **/
+    color: white;
+}
+.contenedor_contacto p {
+font-size: 1.8rem;
+}
+/*=====  End of CONTACTANOS  ======*/
+
+
+/*=============================================
+=            BLOG Y TESTIMONIALES            =
+=============================================*/
+.seccion-inferior{
+display: flex;
+justify-content: space-between;
+}
+.seccion-inferior .blog{
+flex-basis: 60%;
+}
+.seccion-inferior .testimoniales{
+flex-basis: calc(40% - 2rem);
+}
+.entrada_blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entrada_blog:last-of-type{
+    margin-bottom: 0;
+}
+.entrada_blog .imagen_blog{
+   flex-basis: 40%; 
+}
+.entrada_blog .texto_entrada{
+    flex-basis: calc(60% - 3rem);
+}
+.entrada_blog a{
+    color: black;
+    text-decoration: none;
+}
+.texto_entrada h4{
+    margin: 0;
+    line-height: 1.4; /** interlineado osea espacio entre lineas **/
+}
+.texto_entrada h4::after{ /** :: significa que esta creando un seudo-elemento, estos se crean de forma virtual, no pueden ser seleccionados **/
+content: "";
+display: block; /** para poder cambiarle el tamaño **/
+width: 15rem;
+height: .5rem;
+background-color: #71b100;
+margin-top: 1rem;
+}
+.texto_entrada span{
+    color: #e08709;
+}
+/*=====  End of BLOG Y TESTIMONIALES  ======*/
 
 
