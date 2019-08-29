@@ -88,6 +88,10 @@ background-color: #71b100;
 /*=============================================
             =       HEADER          =
 =============================================*/
+.site-header {
+background-color: #333333;
+padding: 1rem 0 3rem 0; /** arriba, derecha abajo,izquierda **/
+}
 .site-header.inicio{
     background-image: url(../img/header.jpg);
     background-position: center center;
@@ -309,5 +313,24 @@ justify-content: space-between;
 }
 
 /*=====  End of FOOTER  ======*/
+
+
+/*=============================================
+=            CSS PARA PAGINAS INTERNAS            =
+=============================================*/
+.contenido_nosotros { /** padre **/
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /** 50% 50% defino que los hijos ocupen asi el espacio del contenedor padre, en vez de usar display flex **/
+    grid-column-gap: 2rem; /** si usamos grid y necesitamos un paddin o magen, usamos esta propiedad gap **/  
+}
+.texto_nosotros blockquote {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+  padding: 1rem 0 3rem 0;
+
+}
+
+/*=====  End of CSS PARA PAGINAS INTERNAS  ======*/
 
 
