@@ -18,7 +18,7 @@ body {
 img {
 max-width: 100%; /** hace que todas las imagenes sean responsivas y se ajusten a su contenedor **/
 }
-.contenedor{
+.contenedor{ /** CENTRA EL CONTENIDO DEL CONTENEDOR **/
     max-width: 120rem; /** = 1200px **/
     margin: 0 auto 0 auto; /* margen top derecha abajo izquierda */
     line-height: 2;
@@ -41,7 +41,7 @@ h4 {
 /*=============================================
 =            UTILIDADES            =
 =============================================*/
-.seccion { /** da un margen arriba y abajo del contenedor **/
+.seccion { /** DA UN POCO DE SEPARACION - margen arriba y abajo del contenedor **/
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -260,6 +260,54 @@ margin-top: 1rem;
 .texto_entrada span{
     color: #e08709;
 }
+
+
+/*----------  TESTIMONIALES  ----------*/
+.testimonial{
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+.testimonial p{
+    text-align: right;  
+}
+.testimonial blockquote::before{
+    content: "";
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute; /** es el hijo **/
+    left: -2rem;
+}
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/** para poder posicionar el seudo elemento de las comillas , se debe poner como position:relative al padre en este caso blockquote y luego posicion:absolute al hijo en este caso es la imagen **/
 /*=====  End of BLOG Y TESTIMONIALES  ======*/
+
+
+/*=============================================
+=            FOOTER            =
+=============================================*/
+.site_footer {
+background-color: #333333;
+margin: 0;
+}
+.contenedor_footer { /** el padre donde se pone flex y justify **/
+padding: 3rem 0;
+display: flex;
+justify-content: space-between;
+}
+.copyright {
+    margin: 0;
+    color: white;
+}
+
+/*=====  End of FOOTER  ======*/
 
 
