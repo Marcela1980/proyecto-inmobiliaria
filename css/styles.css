@@ -55,7 +55,9 @@ h4 {
 .d_block{
     display: block!important; /** esto hace que aunque haya un display despues de este, el sistema toma este como primero e importante **/
 }
-
+.contenido_centrado{
+max-width: 800px;
+}
 /*=====  End of UTILIDADES  ======*/
 
 
@@ -186,6 +188,8 @@ margin: 0;  /** para sacar el margen a h3 y p solo del contenedor anuncio, de es
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px; /** para que los iconos de anuncio se acomoden mejor **/
 }
 .iconos_caracteristicas li{
    /* flex: 1;*/
@@ -323,6 +327,7 @@ justify-content: space-between;
 /*=============================================
 =            CSS PARA PAGINAS INTERNAS            =
 =============================================*/
+/** NOSOTROS **/
 .contenido_nosotros { /** padre **/
     display: grid; 
     grid-template-columns: repeat(2, 1fr); /** 50% 50% defino que los hijos ocupen asi el espacio del contenedor padre, en vez de usar display flex **/
@@ -336,6 +341,12 @@ justify-content: space-between;
 
 }
 
+/** ANUNCIO **/
+.resumen_propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /*=====  End of CSS PARA PAGINAS INTERNAS  ======*/
 
 
