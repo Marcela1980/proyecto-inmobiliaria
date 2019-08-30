@@ -156,14 +156,19 @@ padding: 1rem 0 3rem 0; /** arriba, derecha abajo,izquierda **/
 =            MAIN            =
 =============================================*/
 /** ANUNCIOS **/
-.contenedor_anuncios{
+.contenedor_anuncios{ /* padre de anuncio */
 display: flex;
 justify-content: space-between;
+flex-wrap: wrap;  /* esto separa los anuncios y los posiciona debajo */
 }
-.anuncio{
-flex-basis: calc(33.3% - 1.6rem);
+.anuncio{ /* hijo de contenedor anuncios */
+flex: 0 0 calc(33.3% - 1.6rem); /** grow shrink flex-basis **/
+/** flex-grow: 0;  el contenido crece 
+flex-shrink: 0; es para que no se ajuste al contenedor, osea se encoja, por defaul es 1, y que tome el tamaño de la base en este caso 33.33% 
+flex-basis: calc(33.3% - 1.6rem); **/
 border: 1px solid #b5b5b5;
 background-color: #f5f5f5;
+margin-bottom: 2rem;
 }
 .contenido_anuncio{
 padding: 2rem;
