@@ -74,6 +74,10 @@ margin-top: 3rem;
 /** los enlaces y las imagenes son display inline no permiten se poner width ni margen ni padding, pero si le decimos que se vuelva inline-block me aplica sin ocupar todo el ancho**/
 display: inline-block;
 text-align: center;
+border: none;
+}
+.boton:hover{
+    cursor: pointer;
 }
 .boton_amarillo{
 background-color: #e08709;
@@ -349,8 +353,48 @@ justify-content: space-between;
 }
 
 /** CONTACTO **/
+.contacto p{
+    font-size: 1.6rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0; /** arriba abajo izquierda derecha **/
+}
+legend{
+    font-size: 2.4rem;
+    color: #333333;
+}
 label {
+    font-weight: 700;
+    text-transform: uppercase;
     display: block;
+}
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {  /** hace que se ajuste al espeacio **/
+    width: auto;
+    margin: 0;
+}
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea{
+   height: 20rem;
+}
+.forma_contacto{
+max-width: 30rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 /*=====  End of CSS PARA PAGINAS INTERNAS  ======*/
 

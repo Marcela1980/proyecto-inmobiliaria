@@ -33,7 +33,7 @@
 <main class="contenedor seccion contenido_centrado">
     <h2 class="fw_300 centrar_texto">Llena el Formulario de Contacto</h2>
 
-    <form action="">
+    <form class="contacto" action="">
         <fieldset> <!--encierra campos relacionados-->
             <legend>Información Personal</legend>
             <label for="nombre">Nombre:</label>
@@ -58,19 +58,20 @@
             <option value="vende">Vende</option>        
         </select>
         <label for="cantidad">Cantidad</label>
-        <input type="number" min="0">
+        <input type="number" min="0" max="50">
         </fieldset>
 
         <fieldset>
             <legend>Contacto</legend>
 
             <p>Como desea ser Contactado:</p>
-            <label for="telef">Teléfono</label>
-            <input type="radio" name="contacto" value="" id="telef">
+            <div class="forma_contacto">
+                <label for="telef">Teléfono</label>
+                <input type="radio" name="contacto" value="" id="telef">
 
-            <label for="correo">E-mail:</label>
-            <input type="radio" name="contacto" value="" id="correo">
-
+                <label for="correo">E-mail:</label>
+                <input type="radio" name="contacto" value="" id="correo">
+            </div>
             <!--<p>Elija del Menu</p>
             <input type="checkbox" name="orden" value="hamburguesa"> hamburguesa
             <input type="checkbox" name="orden" value="papas"> papas
@@ -80,17 +81,12 @@
         <label for="fecha">Fecha:</label>
         <input type="date" id="fecha">
         <label for="hora">Hora</label>
-        <input type="time" id="hora">
+        <input type="time" id="hora" min="09:00" max="18:00">
 
         </fieldset>
 
-
-      <input type="submit">
+      <input type="submit" value="Enviar" class="boton boton_verde">
            
-
-
-
-
     </form>
 </main>
 <!--FOOTER-->
