@@ -347,6 +347,11 @@ justify-content: space-between;
     justify-content: space-between;
     align-items: center;
 }
+
+/** CONTACTO **/
+label {
+    display: block;
+}
 /*=====  End of CSS PARA PAGINAS INTERNAS  ======*/
 
 
